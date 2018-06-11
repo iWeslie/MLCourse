@@ -17,10 +17,15 @@ for iter = 1:num_iters
     %       of the cost function (computeCost) and gradient here.
     %
 
+    % simultaneously update θj for all j
+    x = X(:,2);
+    theta0 = theta(1);
+    theta1 = theta(2);
 
+    theta0 = theta0 - alpha / m * sum(X * theta - y);
+    theta1 = theta1 - alpha / m * sum((X * theta -y) .* x);
 
-
-
+    theta = [theta0; theta1];
 
 
     % ============================================================
