@@ -21,12 +21,8 @@ hx = sigmoid(X * theta);
 J = (1 / m) * sum(-y .* log(hx) - (1 - y) .* log(1 - hx)) + ...
     (lambda / (2 * m)) * sum(theta(2:end) .^ 2);
 
-grad = (1 / m) * sum((hx - y) .* X) + (lambda / m) .* theta;
-grad(1, 1) = (1 / m) * sum((sigmoid(X(1, :) * theta(1)) - y) .* X(1, :));
-
-% correct:
-% grad(1,1) = 1 / m * (X(:,1)' * (sigmoid(X * theta) - y))
-% grad(2:end,end) = (1 / m * (X(:,2:end)' * (sigmoid(X * theta) - y)) + lambda / m * theta(2:end));
+grad(1, 1) = (1 / m) * sum((hx - y) .* X(:, 1));
+grad(2:end, end) = (1 / m) * (sum((hx - y) .* X(:, 2:end)))' + (lambda / m) .* theta(2:end);
 
 
 % =============================================================
