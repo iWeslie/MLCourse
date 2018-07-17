@@ -48,11 +48,14 @@ x = zeros(n, 1);
 %
 %
 
+% Generate a column vector: [1 2 3 4 5 ... n]
+vocab_indices = (1:n)';
 
+% ismember: returns a vector containing 1 (true) 
+% where the data in vocab_indices is found in word_indices
 
-
-
-
+% find whether each index in word_indices is in vocab_indices
+x = ismember(vocab_indices, word_indices);
 
 
 % =========================================================================
