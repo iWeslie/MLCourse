@@ -1,2 +1,5 @@
 # MLCourse
-Note and exercise of Stanford University Machine Learning Course.
+Note and exercises of Stanford University Machine Learning Course from cursera.
+
+![cer](./ML certification.pdf)
+
