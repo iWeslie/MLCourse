@@ -1,5 +1,5 @@
 # MLCourse
 Note and exercises of Stanford University Machine Learning Course from cursera.
 
-![cer](./ML certification.pdf)
+![cer](http://iweslie.com/ML%20certification.pdf)
 
